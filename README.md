@@ -1,1 +1,1 @@
-# C functions
+# C programming
