@@ -12,8 +12,8 @@ int main(void)
 		if (c != 'q' || c != 'o')
 		{
 			putchar(c);
-			c++;
 		}
+		c++;
 	}
 	putchar('\n');
 	return (0);
