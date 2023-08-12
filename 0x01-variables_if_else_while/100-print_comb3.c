@@ -1,20 +1,22 @@
 #include <stdio.h>
 /**
- *main - Entry point, print 00 to 99
+ *main - print 00 to 99 with no duplicate digits or combos: no 11, no 10 (01)
+ *
  *Return: Always 0 (Success)
  */
 int main(void)
 {
-	int large;
-	int small;
+	int ones;
+	int tens;
 
-	for (large = '0'; large <= '8'; large++)
+	for (tens = '0'; tens <= '8'; tens++)
 	{
-		for (small = '0'; small <= '9'; small++)
+		for (ones = (tens + 1); ones <= '9'; ones++)
 		{
-			putchar(large);
-			putchar(small);
-			if (!(large == '9' && small == '9'))
+			putchar(tens);
+			putchar(ones);
+
+			if (tens != '8' || ones != '9')
 			{
 				putchar(',');
 				putchar(' ');
