@@ -3,6 +3,9 @@
 /**
  * print_times_table - print tiimes table
  * @n: passed number
+ * @coloum: first number
+ * @row: second number
+ * @res: result of multiply
  */
 
 void print_times_table(int n)
@@ -22,7 +25,7 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 				}
-				if (res < 10)
+				if (res < 10 && res != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
