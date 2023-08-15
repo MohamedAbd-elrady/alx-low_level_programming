@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
+ * _abs - returns the absolute value
+ * @n: number to check
+ * Return: the corrected value
  */
 
 int _abs(int n)
