@@ -19,6 +19,6 @@ int main(void)
 			res += i;
 		}
 	}
-	printf(res);
+	printf("%d", res);
 	return (0);
 }
