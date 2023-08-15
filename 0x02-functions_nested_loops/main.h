@@ -62,7 +62,7 @@ int _abs(int);
  * Return: last digit of number
  */
 
-int print_last_digit(int);
+int print_last_digit(long int);
 
 /**
  * jack_bauer - print every minute of a day
