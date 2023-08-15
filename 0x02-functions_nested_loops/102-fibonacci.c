@@ -18,7 +18,7 @@ int main(void)
 		x = y;
 		y = z;
 
-		printf("%d", z);
+		printf("%ld", z);
 
 		if (i == 49)
 		{
