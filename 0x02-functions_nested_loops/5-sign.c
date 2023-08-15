@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_sign - checks if number is greater or equal or lower then zer0
- * @n: entered number
- * Return: 1 greater, -1 lower, 0 equal 
+ *print_sign - checks if number is greater or equal or lower then zer0
+ *@n: entered number
+ *Return: 1 greater, -1 lower, 0 equal
  */
 
 int print_sign(int n)
