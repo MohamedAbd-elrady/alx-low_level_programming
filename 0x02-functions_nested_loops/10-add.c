@@ -2,6 +2,8 @@
 
 /**
  * add - ads to integers
+ * @a: first number
+ * @b: second number
  * Return: return the result
  */
 
