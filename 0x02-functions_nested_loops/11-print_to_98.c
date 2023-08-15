@@ -40,6 +40,8 @@ void print_to_98(int n)
 			}
 			if (n < 0)
 			{
+				int nw;
+
 				nw = n * -1;
 
 				if (nw <= -10)
