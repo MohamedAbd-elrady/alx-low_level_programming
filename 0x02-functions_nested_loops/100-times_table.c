@@ -20,12 +20,12 @@ void print_times_table(int n)
 			{
 				res = coloum * row;
 
-				if (res != 0)
+				if (row != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
 				}
-				if (res < 10 && res != 0)
+				if (res < 10 && row != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
