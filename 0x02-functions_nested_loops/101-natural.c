@@ -18,6 +18,7 @@ int main(void)
 		{
 			res += i;
 		}
+		i++;
 	}
 	printf("%d", res);
 	return (0);
