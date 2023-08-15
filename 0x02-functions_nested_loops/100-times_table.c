@@ -3,9 +3,6 @@
 /**
  * print_times_table - print tiimes table
  * @n: passed number
- * @coloum: first number
- * @row: second number
- * @res: result of multiply
  */
 
 void print_times_table(int n)
