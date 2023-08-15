@@ -12,6 +12,8 @@ int main(void)
 	x = 0;
 	y = 1;
 
+	sum = 0;
+
 	for (i = 0; i < 50; i++)
 	{
 		z = x + y;
