@@ -82,5 +82,12 @@ void print_square(int size);
 
 void print_triangle(int size);
 
+/**
+ * print_number - print the number passed
+ * @n: number passed
+ */
+
+void print_number(int n);
+
 
 #endif
