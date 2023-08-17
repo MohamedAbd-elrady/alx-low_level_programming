@@ -61,5 +61,12 @@ void more_numbers(void);
 
 void print_line(int n);
 
+/**
+ * print_diagonal - prints diagonal lines
+ * @n: number of repeats
+ */
+
+void print_diagonal(int n);
+
 
 #endif
