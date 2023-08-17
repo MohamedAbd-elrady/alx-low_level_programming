@@ -14,7 +14,14 @@ void print_number(int n)
 			_putchar('-');
 			n *= -1;
 		}
-		if (n >= 1000)
+		if (n >= 10000)
+		{
+			_putchar('0' + (n / 10000));
+			_putchar('0' + (n / 1000) % 10);
+			_putchar('0' + (n / 100) % 10);
+			_putchar('0' + ((n % 100) / 10));
+		}
+		else if (n >= 1000)
 		{
 			_putchar('0' + (n / 1000));
 			_putchar('0' + (n / 100) % 10);
