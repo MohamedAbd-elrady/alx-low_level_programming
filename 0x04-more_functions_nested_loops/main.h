@@ -75,5 +75,12 @@ void print_diagonal(int n);
 
 void print_square(int size);
 
+/**
+ * print_triangle - prints the left half of the triangle
+ * @size: size of the triangle
+ */
+
+void print_triangle(int size);
+
 
 #endif
