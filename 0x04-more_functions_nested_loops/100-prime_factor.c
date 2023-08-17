@@ -8,52 +8,26 @@
 int main(void)
 {
 	unsigned long n = 612852475143;
-	unsigned long pn = 2; /*prime number*/
-	unsigned long c = 0; /*check for largest*/
-	int i = 0;
+	unsigned long pn = 2; /* prime number */
+	unsigned long c = 0;  /* check for largest */
 
-	while (1)
+	while (n > 1)
 	{
-		while (i == 0)
+		if (n % pn == 0)
 		{
-			if (pn != 2)
+			n = n / pn;
+			if (pn > c)
 			{
-				if ((pn % 1 == 0) && (pn % pn == 0))
-				{
-					i = 1;
-				}
-				else
-				{
-					pn++;
-				}
-			}
-			else
-			{
-				i = 1;
-			}
-		}
-		if (n / pn != 1)
-		{
-			if (n % pn == 0)
-			{
-				n = n / pn;
-
-				if (pn > c)
-				{
-					c = pn;
-				}
-			}
-			else
-			{
-				pn++;
-				i = 0;
+				c = pn;
 			}
 		}
 		else
 		{
-			printf("%ld", c);
-			break;
+			pn++;
 		}
 	}
+
+	printf("%lu\n", c);
+
 	return (0);
 }
