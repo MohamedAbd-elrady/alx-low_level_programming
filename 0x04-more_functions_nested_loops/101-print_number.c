@@ -7,39 +7,41 @@
 
 void print_number(int n)
 {
-	if (n != 0)
+	long m; /* power of 10 */
+	int c; /* boolean check */
+	long num; /* convert int to long */
+
+	num = n;
+
+	if (num < 0)
 	{
-		if (n < 0)
-		{
-			_putchar('-');
-			n *= -1;
-		}
-		if (n >= 10000)
-		{
-			_putchar('0' + (n / 10000));
-			_putchar('0' + (n / 1000) % 10);
-			_putchar('0' + (n / 100) % 10);
-			_putchar('0' + ((n % 100) / 10));
-		}
-		else if (n >= 1000)
-		{
-			_putchar('0' + (n / 1000));
-			_putchar('0' + (n / 100) % 10);
-			_putchar('0' + ((n % 100) / 10));
-		}
-		else if (n >= 100)
-		{
-			_putchar('0' + (n / 100));
-			_putchar('0' + ((n % 100) / 10));
-		}
-		else if (n >= 10)
-		{
-			_putchar('0' + (n / 10));
-		}
-		_putchar('0' + (n % 10));
+		num *= -1;
+		_putchar('-');
 	}
-	else
+
+	/* count up */
+	m = 1;
+	c = 1;
+	while (c)
 	{
-		_putchar('0');
+		if (num / (m * 10) > 0)
+			m *= 10;
+		else
+			c = 0;
+	}
+
+	/* count down */
+	while (num >= 0)
+	{
+		if (m == 1)
+		{
+			_putchar(num % 10 + '0');
+			num = -1;
+		}
+		else
+		{
+			_putchar((num / m % 10) + '0');
+			m /= 10;
+		}
 	}
 }
