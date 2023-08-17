@@ -48,5 +48,11 @@ void print_numbers(void);
 
 void print_most_numbers(void);
 
+/**
+ * more_numbers - prints from 0 to 14 10x
+ */
+
+void more_numbers(void);
+
 
 #endif
