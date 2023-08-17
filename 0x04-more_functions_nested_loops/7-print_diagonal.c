@@ -22,12 +22,11 @@ void print_diagonal(int n)
 				j--;
 			}
 			_putchar('\\');
-
-			if (i == n)
-				continue;
-
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
