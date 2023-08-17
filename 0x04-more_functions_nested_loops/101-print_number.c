@@ -22,7 +22,7 @@ void print_number(int n)
 	/* count up */
 	m = 1;
 	c = 1;
-	while (c)
+	while (c == 1)
 	{
 		if (num / (m * 10) > 0)
 			m *= 10;
