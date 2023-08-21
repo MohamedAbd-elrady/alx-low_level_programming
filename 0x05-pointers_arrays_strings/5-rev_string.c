@@ -28,5 +28,6 @@ void rev_string(char *s)
 
 		i++;
 		len--;
+		_putchar('0' + len);
 	}
 }
