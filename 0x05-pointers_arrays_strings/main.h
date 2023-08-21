@@ -55,5 +55,12 @@ void print_rev(char *s);
 
 void rev_string(char *s);
 
+/**
+ * puts2 - prints even caracters in the string
+ * @str: string passed
+ */
+
+void puts2(char *str);
+
 
 #endif
