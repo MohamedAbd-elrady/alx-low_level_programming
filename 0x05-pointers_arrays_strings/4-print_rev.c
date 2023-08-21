@@ -7,10 +7,8 @@
 
 void print_rev(char *s)
 {
-	int len;
 	char *str;
 
-	len = _strlen(s);
 	*str = *s;
 	*s = '\0';
 
