@@ -90,5 +90,13 @@ void print_array(int *a, int n);
 
 char *_strcpy(char *dest, char *src);
 
+/**
+ * _atoi - converts string to integar
+ * @s: string passed
+ * Return: coverted value
+ */
+
+int _atoi(char *s);
+
 
 #endif
