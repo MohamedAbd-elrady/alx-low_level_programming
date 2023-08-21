@@ -20,7 +20,7 @@ void rev_string(char *s)
 	s = s - len;
 	len--;
 
-	while (len != 0)
+	while (len >= 0)
 	{
 		temp = s[i];
 		s[i] = s[len];
