@@ -2,7 +2,7 @@
 
 /**
  * rev_string - takes string and reverse it
- * @s: string passed 
+ * @s: string passed
  */
 
 void rev_string(char *s)
@@ -17,8 +17,8 @@ void rev_string(char *s)
 		s++;
 	}
 
-	s = s - 1 - len;
-	len --;
+	s = s - len;
+	len--;
 
 	while (len != 0)
 	{
