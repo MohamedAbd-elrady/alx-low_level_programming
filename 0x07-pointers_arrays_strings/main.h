@@ -71,5 +71,17 @@ unsigned int _strspn(char *s, char *accept);
 
 char *_strpbrk(char *s, char *accept);
 
+/**
+ * _strstr - locates a substring
+ *
+ * @haystack: string to look through
+ * @needle: substring to find
+ *
+ * Return: pointer to the beginning of the located substring
+ * or NULL if the substring is not found.
+ */
+
+char *_strstr(char *haystack, char *needle);
+
 
 #endif
