@@ -91,5 +91,13 @@ char *_strstr(char *haystack, char *needle);
 
 void print_chessboard(char (*a)[8]);
 
+/**
+ * print_diagsums - prints the sum of the two diagonals of a square matrix
+ * @a: pointer to array a[][]
+ * @size: number rows and columns
+ */
+
+void print_diagsums(int *a, int size);
+
 
 #endif
