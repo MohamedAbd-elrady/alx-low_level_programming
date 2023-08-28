@@ -28,13 +28,25 @@ char *_memset(char *s, char b, unsigned int n);
  * _memcpy -  copies n bytes from memory area src to memory area dest
  *
  * @dest: first memory area
- * @scr: second memory area
+ * @src: second memory area
  * @n: number of bytes
  *
  * Return: dest pointer
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n);
+
+/**
+ * _strchr - Returns a pointer to the first occurrence of
+ * the character c in the string s, or NULL if the character is not found
+ *
+ * @s: string passed
+ * @c: character to search for
+ *
+ * Return: pointer to character
+ */
+
+char *_strchr(char *s, char c);
 
 
 #endif
