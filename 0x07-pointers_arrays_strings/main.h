@@ -60,7 +60,7 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 
 /**
- * _strbrk -  searches a string for any of a set of bytes
+ * _strpbrk -  searches a string for any of a set of bytes
  *
  * @s: string passed
  * @accept: array to compare
