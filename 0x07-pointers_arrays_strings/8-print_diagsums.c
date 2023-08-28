@@ -9,6 +9,9 @@
 
 void print_diagsums(int *a, int size)
 {
+	int row, i;
+	int d1 = 0, d2 = 0;
+
 	for (row = 0; row < size; row++)
 	{
 		i = (row * size) + row;
