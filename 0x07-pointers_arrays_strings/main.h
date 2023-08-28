@@ -48,5 +48,28 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 
 char *_strchr(char *s, char c);
 
+#include "main.h"
+
+/**
+ * _strspn - return length of string that matches values consistently
+ * @s: string to search
+ * @accept: target matches
+ * Return: number of bytes consecutively matched
+ */
+
+unsigned int _strspn(char *s, char *accept);
+
+/**
+ * _strbrk -  searches a string for any of a set of bytes
+ *
+ * @s: string passed
+ * @accept: array to compare
+ *
+ * Return: a pointer to the byte in s that matches one of the bytes in accept
+ * or NULL if no such byte is found
+ */
+
+char *_strpbrk(char *s, char *accept);
+
 
 #endif
