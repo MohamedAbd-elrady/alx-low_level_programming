@@ -66,7 +66,7 @@ char **strtow(char *str)
 		wordlen = wordcounter(str, i + 1, 0);
 		if (i == 0 && str[i] != ' ')
 			wordlen++;
-		p[i] = malloc(wordlen * sizeof(char) + 1);
+		p[i] = malloc((wordlen + 1) * sizeof(char));
 		if (p[i] == NULL)
 		{
 			for ( ; i >= 0; --i)
@@ -85,5 +85,5 @@ char **strtow(char *str)
 		p[i][j] = '\0';
 	}
 	p[i] = NULL;
-	return (p);
+	return (p);	
 }
