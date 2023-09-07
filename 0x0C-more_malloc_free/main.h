@@ -36,5 +36,14 @@ int _strlen(char *s);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 
+/**
+ * _calloc - function that allocates memory for an array, using malloc.
+ * @nmemb: elements of the array.
+ * @size: size of byte.
+ * Return: pointer to array.
+ */
+
+void *_calloc(unsigned int nmemb, unsigned int size);
+
 
 #endif
