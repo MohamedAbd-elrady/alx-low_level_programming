@@ -18,5 +18,23 @@ int _putchar(char c);
 
 void *malloc_checked(unsigned int b);
 
+/**
+ * _strlen - counts the legnth of string
+ * @s: string passed
+ * Return: lengnth
+ */
+
+int _strlen(char *s);
+
+/**
+ * string_nconcat - function that concatenates two strings.
+ * @s1: string one.
+ * @s2: string two.
+ * @n: the first bytes needded from s2.
+ * Return: pointeer to the new string.
+ */
+
+char *string_nconcat(char *s1, char *s2, unsigned int n);
+
 
 #endif
