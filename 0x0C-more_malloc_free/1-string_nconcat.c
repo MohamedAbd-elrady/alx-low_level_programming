@@ -30,6 +30,7 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
+	unsigned int i, j;
 
 	ptr = malloc(sizeof(char) * (n + _strlen(s1) + 1));
 
