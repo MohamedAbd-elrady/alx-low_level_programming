@@ -24,7 +24,7 @@ void *malloc_checked(unsigned int b);
  * Return: lengnth
  */
 
-unsigned int _strlen(char *s);
+int _strlen(char *s);
 
 /**
  * string_nconcat - function that concatenates two strings.

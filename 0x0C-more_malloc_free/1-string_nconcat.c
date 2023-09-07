@@ -7,7 +7,7 @@
  * Return: lengnth
  */
 
-unsigned int _strlen(char *s)
+int _strlen(char *s)
 {
 	int len = 0;
 
@@ -30,14 +30,18 @@ unsigned int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i, j;
+	int i, j, num;
+
+	num = n;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	if (num >= _strlen(s2))
+		num = _strlen(s2);
 
-	ptr = malloc(sizeof(char) * (n + _strlen(s1) + 1));
+	ptr = malloc(sizeof(char) * (num + _strlen(s1) + 1));
 
 	if (ptr == NULL)
 	{
@@ -49,22 +53,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			ptr[i] = s1[i];
 		}
-		if (n >= _strlen(s2))
+		for (j = 1; j <= num; j++)
 		{
-			for (j = 0; *(s2 + j) != '\0'; j++)
-			{
-				ptr[i + j] = s2[j];
-			}
+			ptr[i + j] = s2[j];
+		}
 			ptr[i + j + 1] = '\0';
-		}
-		else
-		{
-			for (j = 0; j < n; j++)
-                        {
-                                ptr[i + j] = s2[j];
-                        }
-                        ptr[i + j + 1] = '\0';
-		}
 		return (ptr);
 	}
 }
