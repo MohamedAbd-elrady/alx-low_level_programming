@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		res1 = atoi(argv[1]);
 		res2 = atoi(argv[2]);
-		printf("%ud\n", res1 * res2);
+		printf("%u\n", res1 * res2);
 		return (0);
 	}
 	else
