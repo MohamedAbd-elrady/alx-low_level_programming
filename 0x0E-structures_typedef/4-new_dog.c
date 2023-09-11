@@ -46,13 +46,18 @@ char *_strcpy(char *dest, char *src)
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner name
+ * Return: pointer to new struct
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggy = NULL;
+	dog_t *doggy;
 	char *name_cpy;
 	char *owner_cpy;
+
+	doggy = malloc(sizeof(dog_t));
+	if (doggy == NULL)
+		return (NULL);
 
 	if (name != NULL)
 	{
