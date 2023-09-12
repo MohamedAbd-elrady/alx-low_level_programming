@@ -197,9 +197,9 @@ julien@ubuntu:~/0x0c. macro, structures$
 - Directory: `0x0D-preprocessor`
 - File: `4-sum.h`
 
-### ToDO
+### TO DO
 
-###### mandatory
+##### mandatory
 - [x] 0. Object-like Macro
 - [x] 1. Pi
 - [x] 2. File name
