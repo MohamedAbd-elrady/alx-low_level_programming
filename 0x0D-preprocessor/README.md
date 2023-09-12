@@ -16,11 +16,10 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ### General
 - What are macros and how to use them
-+ What are the most common predefined macros
-* How to include guard your header files
+- What are the most common predefined macros
+- How to include guard your header files
 
 ### Copyright - Plagiarism
-
 - You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 - You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
 - You are not allowed to publish any content of this project.
@@ -28,7 +27,6 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Requirements
 ### General
-
 - Allowed editors: `vi`, `vim`, `emacs`
 - All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - All your files should end with a new line
@@ -42,3 +40,59 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 - In the following examples, the `main.c` files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own `main.c` files at compilation. Our `main.c` files might be different from the one shown in the examples
 - Don’t forget to push your header file
 - All your header files should be include guarded
+
+
+
+
+## Tasks
+### 0. Object-like Macro
+
+Create a header file that defines a macro named `SIZE` as an abbreviation for the token `1024`.
+
+	- julien@ubuntu:~/0x0c. macro, structures$ cat 0-main.c
+	- #include "0-object_like_macro.h"
+	- #include "0-object_like_macro.h"
+	- #include <stdio.h>
+
+	- /**
+	-  * main - check the code
+	-  *
+	-  * Return: Always 0.
+	-  */
+	- int main(void)
+	- {
+	-     int s;
+
+	-     s = 98 + SIZE;
+	-     printf("%d\n", s);
+	-     return (0);
+	- }
+	- julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c -o a
+	- julien@ubuntu:~/0x0c. macro, structures$ ./a 
+	- 1122
+	- julien@ubuntu:~/0x0c. macro, structures$
+
+```Linux
+julien@ubuntu:~/0x0c. macro, structures$ cat 0-main.c
+#include "0-object_like_macro.h"
+#include "0-object_like_macro.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int s;
+
+    s = 98 + SIZE;
+    printf("%d\n", s);
+    return (0);
+}
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c -o a
+julien@ubuntu:~/0x0c. macro, structures$ ./a 
+1122
+julien@ubuntu:~/0x0c. macro, structures$ 
+```
