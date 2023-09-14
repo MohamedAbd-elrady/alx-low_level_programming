@@ -7,7 +7,7 @@
 
 void pc(va_list args)
 {
-	printf("%c", va_arg(args, char));
+	printf("%c", va_arg(args, int));
 }
 
 /**
@@ -27,7 +27,7 @@ void pi(va_list args)
 
 void pf(va_list args)
 {
-	printf("%f", va_arg(args, float));
+	printf("%f", va_arg(args, double));
 }
 
 /**
@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == p_form[j].letter)
 			{
 				printf("%s", separator);
-				format[j].func(args);
+				p_form[j].func(args);
 				separator = ", ";
 			}
 			j++;
