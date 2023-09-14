@@ -60,10 +60,10 @@ void print_all(const char * const format, ...)
 	char *separator;
 
 	da_typ p_form[] = {
-		{"c", pc},
-		{"i", pi},
-		{"f", pf},
-		{"s", ps}
+		{'c', pc},
+		{'i', pi},
+		{'f', pf},
+		{'s', ps}
 	};
 
 	int i, j;
