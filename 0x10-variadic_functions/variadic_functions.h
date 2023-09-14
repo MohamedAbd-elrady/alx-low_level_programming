@@ -14,7 +14,7 @@
 struct types
 {
 	char letter;
-	void (*func)(args);
+	void (*func)(va_list);
 };
 
 typedef struct types da_typ;
