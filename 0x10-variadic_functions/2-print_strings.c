@@ -13,9 +13,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	int i, num_args;
 	char *str;
 
-	if (n == 0)
-		return;
-
 	num_args = n;
 
 	va_start(args, n);
