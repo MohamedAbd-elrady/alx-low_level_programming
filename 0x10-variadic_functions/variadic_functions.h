@@ -13,7 +13,7 @@
 
 struct types
 {
-	char letter;
+	char *letter;
 	void (*func)(va_list);
 };
 
