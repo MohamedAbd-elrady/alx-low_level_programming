@@ -1,92 +1,75 @@
 #include "variadic_functions.h"
 
 /**
- * pc - prints char
- * @args: args
- */
-
-void pc(va_list args)
+  * p_char - prints characters
+  * @c: character to print
+  */
+void p_char(va_list c)
 {
-	printf("%c", va_arg(args, int));
+	printf("%c", va_arg(c, int));
 }
-
 /**
- * pi - prints int
- * @args: args
- */
-
-void pi(va_list args)
+  * p_int - prints integers
+  * @i: integer to print
+  */
+void p_int(va_list i)
 {
-	printf("%i", va_arg(args, int));
+	printf("%d", va_arg(i, int));
 }
-
 /**
- * pf - prints float
- * @args: args
- */
-
-void pf(va_list args)
+  * p_float - prints floats
+  * @f: float to print
+  */
+void p_float(va_list f)
 {
-	printf("%f", va_arg(args, double));
+	printf("%f", va_arg(f, double));
 }
-
 /**
- * ps - prints string
- * @args: args
- */
-
-void ps(va_list args)
+  * p_string - prints strings
+  * @s: string to print
+  */
+void p_string(va_list s)
 {
-	char *s;
+	char *string;
 
-	s = va_arg(args, char *);
-
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s", s);
+	string = va_arg(s, char *);
+	if (string == NULL)
+		string = "(nil)";
+	printf("%s", string);
 }
-
 /**
- * print_all - function that prints anything.
- * @format: a list of types of arguments passed to the function
- */
-
+  * print_all - prints any argument passed into it
+  * @format: formats symbols in order
+  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
+	unsigned int i, j;
 	char *separator;
-
-	da_typ p_form[] = {
-		{"c", pc},
-		{"i", pi},
-		{"f", pf},
-		{"s", ps}
+	va_list argp;
+	v_types valid_types[] = {
+		{"c", p_char},
+		{"i", p_int},
+		{"f", p_float},
+		{"s", p_string}
 	};
 
-	int i, j;
-
-	va_start(args, format);
-
-	i = 0;
+	i = j = 0;
 	separator = "";
-
-	while (format != NULL && format[i] != '\0')
+	va_start(argp, format);
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == p_form[j].letter)
+			if (format[i] == *valid_types[j].valid)
 			{
 				printf("%s", separator);
-				p_form[j].func(args);
+				valid_types[j].f(argp);
 				separator = ", ";
 			}
 			j++;
 		}
+		i++;
 	}
-
-	va_end(args);
 	printf("\n");
-
-
 }

@@ -6,18 +6,17 @@
 #include <stdarg.h>
 
 /**
- * struct types - struct that holds data types
- * @letter: letter to check
- * @func: pointer to function
+ * struct validTypes - struct that holds types
+ * @valid: letter to check
+ * @f: pointer to function
  */
 
-struct types
+typedef struct validTypes
 {
-	char *letter;
-	void (*func)(va_list);
-};
+	char *valid;
+	void (*f)();
+} v_types;
 
-typedef struct types da_typ;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
