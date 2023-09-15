@@ -42,10 +42,7 @@ void ps(va_list args)
 	s = va_arg(args, char *);
 
 	if (s == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
+		s = "(nil)";
 	printf("%s", s);
 }
 
