@@ -17,13 +17,8 @@ int wildcmp_helper(char *s1, char *s2)
 		if (*(s2 + 1) == '*')
 			return (wildcmp_helper(s1, s2 + 1));
 
-		while (*s1 != '\0')
-		{
-			if (wildcmp_helper(s1, s2 + 1))
-				return (1);
-			s1++;
-		}
-		return (wildcmp_helper(s1, s2 + 1));
+		return ((*s1 != '\0' && wildcmp_helper(s1 + 1, s2))
+				|| (wildcmp_helper(s1, s2 + 1)));
 	}
 
 	if (*s1 == *s2)
@@ -41,5 +36,5 @@ int wildcmp_helper(char *s1, char *s2)
 
 int wildcmp(char *s1, char *s2)
 {
-        return (wildcmp_helper(s1, s2));
+	return (wildcmp_helper(s1, s2));
 }
