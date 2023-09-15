@@ -109,5 +109,22 @@ int _strlen(char *s);
 
 int is_palindrome(char *s);
 
+/**
+ * wildcmp - function that compares two strings
+ * @s1: string one
+ * @s2: string two
+ * Return: result
+ */
+
+int wildcmp(char *s1, char *s2);
+
+/**
+ * wildcmp_helper - function that compares two strings
+ * @s1: string one
+ * @s2: string two
+ * Return: 1 if compare, 0 if fail
+ */
+
+int wildcmp_helper(char *s1, char *s2);
 
 #endif
