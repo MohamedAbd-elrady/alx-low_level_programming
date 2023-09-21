@@ -1,24 +1,6 @@
 #include "lists.h"
 
 /**
- * _strlen - counts the legnth of string
- * @s: string passed
- * Return: lengnth
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (len);
-}
-
-/**
  * add_node - function that adds a new node at the beginning of linked list
  * @head: pointer to pointer to the first node
  * @str: string passed to duplicate
@@ -27,26 +9,29 @@ int _strlen(char *s)
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *temp;
+	char *dup;
+	int len;
+	list_t *new;
 
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
 
-	if (str != NULL)
+	dup = strdup(str);
+	if (dup == NULL)
 	{
-		temp->str = strdup(str);
-		temp->len = _strlen(temp->str);
+		free(new);
+		return (NULL);
 	}
-	else
-	{
-		temp->str = strdup("(nil)");
-		temp->len = 0;
-	}
+	for (len = 0; str[len];)
+		len++;
 
-	temp->next = *head;
+	new->str = dup;
+	new->len = len;
+	new->next = *head;
 
-	*head = temp;
+	*head = new;
 
-	return (temp);
+	return (new);
+
 }
