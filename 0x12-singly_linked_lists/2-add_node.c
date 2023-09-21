@@ -38,7 +38,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	else
 	{
-		temp-> = strdup("(nil)");
+		temp->str = strdup("(nil)");
 		temp->len = 0;
 	}
 
