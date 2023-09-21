@@ -6,6 +6,7 @@
  * @str: string to duplicate into new node
  * Return: Address of the new element or NULL if failed
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *current;
@@ -16,7 +17,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	while (current && current->next != NULL)
 		current = current->next;
 
-	for (c = 0; dup_str[c] != '\0'; c++)
+	for (c = 0; str[c] != '\0'; c++)
 		;
 
 	new_node = malloc(sizeof(list_t));
