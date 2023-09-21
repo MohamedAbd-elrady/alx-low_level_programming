@@ -31,7 +31,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	temp = malloc(sizeof(list_t));
 	if (temp == NULL)
-		return(NULL);
+		return (NULL);
 
 	if (str != NULL)
 	{
@@ -40,7 +40,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	else
 	{
-		temp->str = strdup("(null)");
+		temp->str = strdup("(nil)");
 		temp->len = 0;
 	}
 
