@@ -7,7 +7,6 @@
  *
  * Return: Address of new node, NULL if it fails
  */
-
 listadd_t *add_nodeaddress(listadd_t **head, const listint_t *address)
 {
 	listadd_t *new;
@@ -28,7 +27,6 @@ listadd_t *add_nodeaddress(listadd_t **head, const listint_t *address)
  * free_listadd - Free a list
  * @head: Pointer to the start of the list
  */
-
 void free_listadd(listadd_t *head)
 {
 	listadd_t *killnode;
@@ -47,7 +45,6 @@ void free_listadd(listadd_t *head)
  *
  * Return: Number of nodes, if it fails print 98
  */
-
 size_t print_listint_safe(const listint_t *head)
 {
 	listadd_t *newhead;
