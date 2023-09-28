@@ -16,7 +16,7 @@ unsigned int binary_to_uint(const char *b)
 	while (b[i] != '\0')
 	{
 		if (b[i] == '0')
-			StrToNum += 0;
+			;
 		else if (b[i] == '1')
 			StrToNum += 1;
 		else
