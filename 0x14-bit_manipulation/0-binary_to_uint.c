@@ -27,6 +27,9 @@ unsigned int binary_to_uint(const char *b)
 		i++;
 	}
 
+	if (StrToNum == 0)
+		return (0);
+
 	for (twos = 1; StrToNum != 0; StrToNum /= 10, twos *= 2)
 	{
 		b_to_uint += ((StrToNum % 10) * twos);
